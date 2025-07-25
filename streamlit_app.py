@@ -46,7 +46,7 @@ if ingredients_list:
         # smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + search_on)        
         
         # this works fine; but it can't find some fruits (i.e. found Watermelon, but not-found on Figs)
-        smoothiefroot_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_chosen)        
+        smoothiefroot_response = requests.get("https://fruityvice.com/api/fruit/" + search_on.strip())        
         sf_df = st.dataframe(data=smoothiefroot_response.json())
 
 time_to_insert = st.button('Submit Order')
