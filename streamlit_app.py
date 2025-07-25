@@ -26,10 +26,15 @@ ingredients_string = ''
 
 if ingredients_list:    
     ingredients_string = ''
-    for fruit_shosen in ingredients_list:
-        ingredients_string += fruit_shosen + ' '
-        st.subheader(fruit_shosen + ' Nutrition Information')
-        smoothiefroot_response = requests.get("https://fruityvice.com/api/fruit/watermelon")        
+    for fruit_chosen in ingredients_list:
+        ingredients_string += fruit_chosen + ' '
+        st.subheader(fruit_chosen + ' Nutrition Information')
+
+        # This 
+        # smoothiefroot_response = requests.get("https://fruityvice.com/api/fruit/watermelon")        
+        
+        # this works fine
+        smoothiefroot_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_chosen)        
         sf_df = st.dataframe(data=smoothiefroot_response.json())
 
 time_to_insert = st.button('Submit Order')
