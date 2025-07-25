@@ -43,7 +43,7 @@ if ingredients_list:
         st.write('The search value for ', fruit_chosen,' is ', search_on, '.')
 
         # This results in 504 Gateway Timeout ERROR (504)
-        # smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + fruit_chosen)        
+        # smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/" + search_on)        
         
         # this works fine; but it can't find some fruits (i.e. found Watermelon, but not-found on Figs)
         smoothiefroot_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_chosen)        
