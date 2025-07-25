@@ -34,7 +34,7 @@ if ingredients_list:
         # smoothiefroot_response = requests.get("https://fruityvice.com/api/fruit/watermelon")        
         
         # this works fine
-        smoothiefroot_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_chosen)        
+        smoothiefroot_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_chosen)        
         sf_df = st.dataframe(data=smoothiefroot_response.json())
 
 time_to_insert = st.button('Submit Order')
