@@ -41,6 +41,6 @@ if time_to_insert:
 
 # New section to display smoothies nutrition information
 import requests
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+smoothiefroot_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 st.text(smoothiefroot_response.json)
 
