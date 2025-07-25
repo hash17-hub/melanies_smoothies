@@ -2,6 +2,11 @@
 import streamlit as st
 #from snowflake.snowpark.context import get_active_session
 
+# New section to display smoothies nutrition information
+import requests
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
+
 # Write directly to the app
 st.title(f"My First Streamlit App :cup_with_straw: {st.__version__}")
 
