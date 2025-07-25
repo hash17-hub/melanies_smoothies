@@ -5,6 +5,9 @@ import streamlit as st
 # Write directly to the app
 st.title(f"My First Streamlit App :cup_with_straw: {st.__version__}")
 
+name_on_order = st.text_input('Name on Smoothie')
+#st.write('The name on your Smoothie will be', name_on_order)
+
 from snowflake.snowpark.functions import col, when_matched
 
 cnx = st.connection("snowflake")
